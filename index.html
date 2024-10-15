@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- cambio de idioma de la pagina -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"> <!-- quite la ruta y loas otros atributos, solo deje el nombre del archivo -->
+  <title>Formulario</title>
+</head>
+<body>
+  <main><!-- html semantico -->
+    <section class="primary-form"> <!-- agrege secciones -->
+      <h1>¡Bienvenidos a mi fiesta!</h1><!-- mejora de sintaxis -->
+      <h2>Por favor, confirmar asistencia</h2>
+    </section>
+    <section class="form">  <!-- agrege secciones -->
+      <form class="formulario" id="form"> <!-- agrege el id que ocupa en el js -->
+        <!-- anide los inputs en sus respectivos labels -->
+        <!-- les asigne placeholders y que sean requeridos a los inputs -->
+        <label for="name">Nombre: <input type="text" name="name" id="name" placeholder="Nombre completo" required></label>
+        <label for="age">Edad: <input type="number" name="age" id="age" min="18" max="40" placeholder="De 18 años a 40 años" required></label> <!-- estableci un min y max para el input de edad -->
+        <label for="nationality">Nacionalidad:
+          <select name="nationality" id="nationality"> 
+            <option value="Sin nacionalidad">Seleccionar</option> <!-- coloque esta opcion como tipo placeholder-->
+            <!-- Cambie los values de las opcion para que se muestren en la consola -->
+            <option value="Argentina">Argentina</option>
+            <option value="Mexicana">Mexicana</option>
+            <option value="Peruana">Peruana</option>
+            <option value="Venezolana">Venezolana</option>
+          </select>
+        </label>
+        <button type="submit">Enviar</button> <!-- cambie el input tipo submit por un button semantico -->
+      </form>
+    </section>
+    <section class="secundary-form">  <!-- agrege secciones -->
+      <div>
+        <h2>Lista de invitados</h2>
+        <span></span>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script> <!-- quite la ruta, solo deje el nombre del archivo -->
+</body>
+</html>
